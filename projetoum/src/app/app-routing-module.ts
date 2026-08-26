@@ -6,7 +6,12 @@ const routes: Routes = [
 {
   path: 'livros',
   loadChildren: () => import('./livros/livros-module').then(m => m.LivrosModule)
+},
+{
+  path: 'aluno',
+  loadChildren: () => import('./aluno/aluno-module').then(m => m.AlunoModule)
 }
+
 
 ];
 
