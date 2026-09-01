@@ -1,9 +1,18 @@
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { LivrosRoutingModule } from './livros-routing-module';
 import { Cadastro } from './cadastro/cadastro';
 import { Listagem } from './listagem/listagem';
+import { BrowserModule } from '@angular/platform-browser';
+
+@NgModule({
+  imports: [
+    BrowserModule,
+    FormsModule
+  ]
+})
 
 @NgModule({
   declarations: [Cadastro, Listagem],
