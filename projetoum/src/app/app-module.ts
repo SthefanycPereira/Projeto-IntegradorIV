@@ -3,10 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
-import { DesafioFinal } from './lista-exercicio/desafio-final/desafio-final';
 
 @NgModule({
-  declarations: [App, DesafioFinal],
+  declarations: [
+    App
+  ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
