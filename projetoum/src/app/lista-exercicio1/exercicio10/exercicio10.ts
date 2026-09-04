@@ -7,11 +7,11 @@ import { Component } from '@angular/core';
   styleUrl: './exercicio10.css',
 })
 export class Exercicio10 {
-  usuario = '';
-  senha = '';
-  mensagem = '';
+ usuario = '';
+ senha = '';
+ mensagem = '';
 
-  entrar(){
-    this.mensagem = 'Bem-Vindo, ' + this.usuario + '!';
-  }
+ entrar() {
+  this.mensagem = 'Bem vindo, ' + this.usuario + '!';
+ }
 }
