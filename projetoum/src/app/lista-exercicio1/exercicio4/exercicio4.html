@@ -1,1 +1,11 @@
-<p>exercicio4 works!</p>
+<label>Nome: </label><br>
+<input type="text" 
+[(ngModel)]="nome"
+(ngModelChange)="verificarValidade()" 
+placeholder="Digite seu nome">
+<br><br>
+
+<p>Nome digitado: {{nome}}</p>
+<button [disabled]="!formularioValido">
+    Salvar
+</button>
