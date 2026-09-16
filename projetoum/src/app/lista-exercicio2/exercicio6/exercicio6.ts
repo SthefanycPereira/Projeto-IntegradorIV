@@ -6,4 +6,33 @@ import { Component } from '@angular/core';
   templateUrl: './exercicio6.html',
   styleUrl: './exercicio6.css',
 })
-export class Exercicio6 {}
+export class Exercicio6 {
+
+  nomes = [
+    'Ana',
+    'Carlos',
+    'Mariana',
+    'João',
+    'Beatriz'
+  ];
+
+  listaInicial = [
+    'Ana',
+    'Carlos',
+    'Mariana',
+    'João',
+    'Beatriz'
+  ];
+
+  removerUltimo() {
+    this.nomes.pop();
+  }
+
+  limparLista() {
+    this.nomes = [];
+  }
+
+  restaurarLista() {
+    this.nomes = [...this.listaInicial];
+  }
+}

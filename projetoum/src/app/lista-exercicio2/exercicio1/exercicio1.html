@@ -1,1 +1,8 @@
-<p>exercicio1 works!</p>
+<button (click)="mostrarOcultarMensagem()">
+  Mostrar ou ocultar mensagem
+</button>
+
+<p *ngIf="mensagemVisivel">
+  Bem-vindo ao sistema
+</p>
+

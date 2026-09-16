@@ -1,0 +1,16 @@
+.par {
+  background-color: rgb(230, 173, 216);
+}
+
+.impar {
+  background-color: lightgray;
+}
+
+.primeiro {
+  font-weight: bold;
+  color: rgb(172, 8, 201);
+}
+
+.ultimo {
+  border: 4px solid rgb(20, 20, 202);
+}

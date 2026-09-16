@@ -1,1 +1,15 @@
-<p>exercicio2 works!</p>
+<h2>Situação do usuário</h2>
+
+<div *ngIf="usuarioLogado; else acessoNegado">
+  Usuário autenticado
+</div>
+
+<ng-template #acessoNegado>
+  Acesso não autorizado
+</ng-template>
+
+<br>
+
+<button (click)="entrarSair()">
+  {{ usuarioLogado ? 'Sair' : 'Entrar' }}
+</button>

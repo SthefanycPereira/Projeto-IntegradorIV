@@ -1,1 +1,15 @@
-<p>exercicio7 works!</p>
+<h2>Lista de disciplinas</h2>
+
+<ul>
+  <li
+    *ngFor="let disciplina of disciplinas; let primeiro = first; let ultimo = last; let par = even; let impar = odd"
+    [ngClass]="{
+      'par': par,
+      'impar': impar,
+      'primeiro': primeiro,
+      'ultimo': ultimo
+    }"
+  >
+    {{ disciplina }}
+  </li>
+</ul>
