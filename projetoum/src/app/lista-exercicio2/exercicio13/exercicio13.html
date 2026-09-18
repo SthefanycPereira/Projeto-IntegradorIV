@@ -1,1 +1,45 @@
-<p>exercicio13 works!</p>
+<h2>Lista de Tarefas</h2>
+
+<p>Total de tarefas: {{ tarefas.length }}</p>
+
+<p>Tarefas concluídas: {{ tarefasConcluidas() }}</p>
+
+<p>Tarefas pendentes: {{ tarefasPendentes() }}</p>
+
+
+<p *ngIf="tarefas.length == 0">
+  Não existem tarefas.
+</p>
+
+<div *ngFor="let tarefa of tarefas">
+
+  <div
+    [ngClass]="{
+      'prioridade-baixa': tarefa.prioridade == 'baixa' && !tarefa.concluida,
+    'prioridade-media': tarefa.prioridade == 'média' && !tarefa.concluida,
+    'prioridade-alta': tarefa.prioridade == 'alta' && !tarefa.concluida,
+    'concluida': tarefa.concluida
+    }"
+  >
+
+    <p><strong>Tarefa:</strong> {{ tarefa.titulo }}</p>
+
+    <p><strong>Responsável:</strong> {{ tarefa.responsavel }}</p>
+
+    <p><strong>Prioridade:</strong> {{ tarefa.prioridade }}</p>
+
+    <p *ngIf="tarefa.concluida">
+      Concluída
+    </p>
+
+    <p *ngIf="!tarefa.concluida">
+      Pendente
+    </p>
+
+    <button (click)="alterarSituacao(tarefa)">
+      Alterar situação
+    </button>
+
+  </div>
+
+</div>

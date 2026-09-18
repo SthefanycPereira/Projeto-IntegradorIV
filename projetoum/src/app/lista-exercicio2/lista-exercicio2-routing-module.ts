@@ -14,6 +14,8 @@ import { Exercicio11 } from './exercicio11/exercicio11';
 import { Exercicio12 } from './exercicio12/exercicio12';
 import { Exercicio13 } from './exercicio13/exercicio13';
 import { Exercicio14 } from './exercicio14/exercicio14';
+import { Exercicio142 } from './exercicio14-2/exercicio14-2';
+import { Exercicio143 } from './exercicio14-3/exercicio14-3';
 import { DesafioFinal } from './desafio-final/desafio-final';
 const routes: Routes = [
   {path: 'exercicio1', component: Exercicio1},
@@ -30,6 +32,8 @@ const routes: Routes = [
      {path: 'exercicio12', component: Exercicio12},
      {path: 'exercicio13', component: Exercicio13},
      {path: 'exercicio14', component: Exercicio14},
+     {path: 'exercicio14-2', component: Exercicio142},
+     {path: 'exercicio14-3', component: Exercicio143},
      {path: 'desafioFinal', component: DesafioFinal}
 ];
 

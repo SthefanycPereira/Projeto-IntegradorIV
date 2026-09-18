@@ -1,0 +1,17 @@
+<h2>Situação do usuário</h2>
+
+@if (usuarioLogado) {
+  <div>
+    Usuário autenticado
+  </div>
+} @else {
+  <div>
+    Acesso não autorizado
+  </div>
+}
+
+<br>
+
+<button (click)="entrarSair()">
+  {{ usuarioLogado ? 'Sair' : 'Entrar' }}
+</button>

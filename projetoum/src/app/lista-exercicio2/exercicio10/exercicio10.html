@@ -1,1 +1,25 @@
-<p>exercicio10 works!</p>
+<h2>Promoção dos Produtos</h2>
+
+<div *ngFor="let produto of produtos">
+
+  <p>{{ produto.nome }}</p>
+
+  <p
+    [ngStyle]="{
+      'color': produto.promocao ? 'red' : 'black'
+    }"
+  >
+    Preço: {{ produto.preco | currency:'BRL' }}
+  </p>
+
+  <p *ngIf="produto.promocao">
+    <strong>Produto em promoção</strong>
+  </p>
+
+  <button (click)="produto.promocao = !produto.promocao">
+    {{ produto.promocao ? 'Desativar promoção' : 'Ativar promoção' }}
+  </button>
+
+  <hr>
+
+</div>

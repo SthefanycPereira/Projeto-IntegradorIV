@@ -1,1 +1,33 @@
-<p>exercicio12 works!</p>
+<h2>Cadastro de Produtos</h2>
+
+<label>Nome:</label>
+<input type="text" [(ngModel)]="nome">
+
+<br><br>
+
+<label>Quantidade:</label>
+<input type="number" [(ngModel)]="quantidade">
+
+<br><br>
+
+<button (click)="cadastrar()">Cadastrar</button>
+
+<p *ngIf="mensagem">
+  {{ mensagem }}
+</p>
+
+<hr>
+
+<h3>Produtos cadastrados</h3>
+
+<div *ngFor="let produto of produtos">
+
+  <p>
+    {{ produto.nome }} - Quantidade: {{ produto.quantidade }}
+
+    <button (click)="excluir(produto)">
+      Excluir
+    </button>
+  </p>
+
+</div>

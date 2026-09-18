@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { ListaExercicio2RoutingModule } from './lista-exercicio2-routing-module';
 import { Exercicio1 } from './exercicio1/exercicio1';
@@ -17,6 +18,8 @@ import { Exercicio12 } from './exercicio12/exercicio12';
 import { Exercicio13 } from './exercicio13/exercicio13';
 import { Exercicio14 } from './exercicio14/exercicio14';
 import { DesafioFinal } from './desafio-final/desafio-final';
+import { Exercicio142 } from './exercicio14-2/exercicio14-2';
+import { Exercicio143 } from './exercicio14-3/exercicio14-3';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,9 @@ import { DesafioFinal } from './desafio-final/desafio-final';
     Exercicio13,
     Exercicio14,
     DesafioFinal,
+    Exercicio142,
+    Exercicio143,
   ],
-  imports: [CommonModule, ListaExercicio2RoutingModule],
+  imports: [CommonModule, FormsModule, ListaExercicio2RoutingModule],
 })
 export class ListaExercicio2Module {}

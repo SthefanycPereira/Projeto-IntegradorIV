@@ -1,1 +1,7 @@
-<p>exercicio14 works!</p>
+<button (click)="mostrarOcultarMensagem()">
+  Mostrar ou ocultar mensagem
+</button>
+
+@if (mensagemVisivel) {
+    <p>Bem-Vindo ao sistema</p>
+}

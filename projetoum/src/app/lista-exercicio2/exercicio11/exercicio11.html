@@ -1,1 +1,24 @@
-<p>exercicio11 works!</p>
+<h2>Lista de Produtos</h2>
+
+<label>
+  <input
+    type="checkbox"
+    [(ngModel)]="somenteDisponiveis"
+  >
+  Mostrar somente produtos disponíveis
+</label>
+
+<br><br>
+
+<ng-container *ngFor="let produto of produtos">
+
+  <div *ngIf="!somenteDisponiveis || produto.quantidade > 0">
+
+    <p>Nome: {{ produto.nome }}</p>
+    <p>Preço: {{ produto.preco | currency:'BRL' }}</p>
+    <p>Quantidade: {{ produto.quantidade }}</p>
+
+
+  </div>
+
+</ng-container>
